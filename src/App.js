@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import './App.css';
 
 function App() {
@@ -95,12 +95,15 @@ function App() {
         ))}
       </select>
 
-      {message && (
-        <p>
-          <span style={{ fontWeight: "bold"}}>You selected</span>{" "}
-          <span style={{ fontWeight: "bold", fontSize: "1.2em" }}>{selectedCountry},</span>
-          <span style={{color: "grey"}}>{` ${selectedState}, ${selectedCity}`}</span>
-        </p>
+
+
+      {selectedCountry && selectedState && selectedCity && (
+        <h2>
+          You selected <span className="highlight">{selectedCity}</span>,{" "}
+          <span className="fade">
+            {selectedState}, {selectedCountry}
+          </span>
+        </h2>
       )}
 
     </div>
