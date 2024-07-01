@@ -68,7 +68,7 @@ function App() {
 
   const handleCityChange = (e) => {
     setSelectedCity(e.target.value);
-    setMessage(`${selectedCountry}, ${selectedState}, ${e.target.value}`);
+    setMessage(`${e.target.value}, ${selectedState}, ${selectedCountry}`);
   };
 
   return (
